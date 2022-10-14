@@ -7,7 +7,7 @@ return {
   },
 };
 }
-export default function FirstPost({ time }) {
+export default function FirstPost({ time }:{ time:string }) {
   return (
     <>
       <h1>{ time }</h1>
