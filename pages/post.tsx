@@ -8,11 +8,15 @@ return {
 };
 }
 export default function FirstPost({ time }:{ time:string }) {
+  function revalidate(){
+    fetch('/api/revalidate');
+  }
   return (
     <>
       <h1>{ time }</h1>
       <h2>
-        <Link href="/">Back to home</Link>
+        <Link href="/">Back to home</Link><br></br>
+        <button onClick={() => revalidate()}>Revalidate</button>
       </h2>
     </>
   );
